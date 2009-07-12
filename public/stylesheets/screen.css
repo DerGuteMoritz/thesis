@@ -1,0 +1,19 @@
+* {
+  font-family:sans-serif;
+}
+
+.contributions-list { margin-left:2em; }
+.contribution {
+  border-top:1px solid #aaa;
+  padding:0.5em;
+}
+.contribution h4 { margin-top:0 }
+.contribution a.vote { color:black }
+.stats {
+  float:right;
+  font-size:0.8em;
+  margin-bottom:0;
+}
+
+.pro { background:blue }
+.contra { background:red }

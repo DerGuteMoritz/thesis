@@ -1,0 +1,13 @@
+<% content_for :title do %>Kategorie: <%=h @category %><% end %>
+
+<h1>Kategorie <%=h @category %> (<%=h @theses.size %> Thesen)</h1>
+
+<% @theses.each do |t| %>
+  <div class="thesis">
+    <h3><%= link_to t, t %></h3>
+    <p><%=h t.text %></p>
+    <p>Autor: <%=h t.author %></p>
+  </div>
+<% end %>
+
+<p><%= link_to 'Zur Übersicht', categories_path %></p>

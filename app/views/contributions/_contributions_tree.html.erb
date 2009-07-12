@@ -1,0 +1,9 @@
+<% return if contributions.size == 0 %>
+
+<div class="contributions-list">
+  <% contributions.each do |c| %>
+    <%= render :partial => 'contribution', :locals => { :contribution => c } %>
+    
+    <%= render :partial => 'contributions_tree', :locals => { :contributions => c.children } %>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+<% content_for :title do %>Kategorien<% end %>
+
+<h1>Kategorien</h1>
+
+<%= render :partial => 'categories_tree', :locals => { :nodes => @root.children } %>
+
+<p><%= link_to 'Neue Kategorie', new_category_path %></p>

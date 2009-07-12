@@ -1,0 +1,1 @@
+Rails.root.join('lib/core_ext').glob('*').each { |l| require l.to_s }

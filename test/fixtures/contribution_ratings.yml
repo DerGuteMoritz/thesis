@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  contribution: 
+  type: 1
+  value: 1.5
+
+two:
+  user: 
+  contribution: 
+  type: 1
+  value: 1.5

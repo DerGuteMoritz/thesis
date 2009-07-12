@@ -1,0 +1,18 @@
+<div class="contribution" style="background-color:<%= contrib_color(contribution) %>">
+  <h4><%= contribution.title %></h4>
+  <p><%= contribution.text %></p>
+  <p class="stats">
+    <strong>Bewertung:</strong> <%=f contribution.average_rating_argumentative_weight, 2 %> 
+    (<%= vote_argumentative_weight_link('++', 'vote', contribution, 1) %>  /
+    <%= vote_argumentative_weight_link('+', 'vote', contribution, 0.33) %>  /
+    <%= vote_argumentative_weight_link('-', 'vote', contribution, -0.33) %>  /
+    <%= vote_argumentative_weight_link('--', 'vote', contribution, -1) %>)
+      , Stil: <%=f contribution.average_rating_style, 2 %> 
+      (<%= contribution.argumentative_weight_ratings.count %> Votes 
+      => Zuverlässigkeit: <%=f contribution.ratings_reliability, 2 %>)
+    <br />
+    <strong>Bewertung:</strong> <%=f contribution.rated_weight, 2 %><br />
+    <strong>Gesamtgewicht</strong>: <%=f contribution.weight, 2 %> (orientiert: <%=f contribution.oriented_weight, 2 %>)<br />
+  </p>
+  <div style="clear:both"></div>
+</div>

@@ -1,0 +1,10 @@
+<% return if nodes.size == 0 %>
+
+<ul>
+  <% nodes.each do |c| %>
+    <li>
+      <%= link_to c, c %>
+      <%= render :partial => 'categories_tree', :locals => { :nodes => c.children } %>
+    </li>
+  <% end %>
+</ul>

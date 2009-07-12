@@ -1,0 +1,9 @@
+<% content_for :title do %>These: <%=h @contribution %><% end %>
+
+<h1>These: <%=h @contribution %></h1>
+
+<p><%=h @contribution.text %></p>
+
+<!--<p>Autor: <%=h @contribution.author %> (<%= link_to 'Edit', edit_contribution_path(@contribution) %>)</p>!-->
+
+<%= render :partial => 'contributions_tree', :locals => { :contributions => @contribution.children } %>
